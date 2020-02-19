@@ -15,7 +15,7 @@ try {
   ok(content, 'content cannot be empty');
   const data = msgType === 'markdown' 
     ? { msgtype: 'markdown', markdown: { content } } 
-    : { msgtype: 'text', markdown: { content, mentioned_list: (process.env.MENTIONED_LIST || '').split(',') } }
+    : { msgtype: 'text', text: { content, mentioned_list: (process.env.MENTIONED_LIST || '').split(',') } }
   ok(process.env.KEY, 'key should be provided');
   axios.post(`https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=${process.env.KEY}`, data, {
     headers: {'Content-Type': 'application/json'}
