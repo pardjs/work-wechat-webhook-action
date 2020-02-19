@@ -4,20 +4,27 @@ This action prints "Hello World" or "Hello" + the name of a person to greet to t
 
 ## Inputs
 
-### `who-to-greet`
+### `msg-type`
 
-**Required** The name of the person to greet. Default `"World"`.
+The type of the Work Wechat message. Default `"text"`.
+
+### `content`
+
+The content of the Work Wechat message. Default `"无话可说"`.
 
 ## Outputs
 
 ### `time`
 
-The time we greeted you.
+The time we call the webhook.
 
 ## Example usage
 
 ```yaml
-uses: actions/hello-world-javascript-action@master
+uses: pardjs/work-wechat-webhook-action@master
 with:
-  who-to-greet: 'Mona the Octocat'
+  msg-type: 'text'
+env:
+  CONTENT: '说点什么'
+  MENTIONED_LIST: 'dozto,do021,bain'
 ```

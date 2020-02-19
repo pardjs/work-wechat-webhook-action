@@ -1,10 +1,14 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Work WeChat Webhook Action'
+description: 'Trigger the webhook of Work WeChat'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
+  msg-type:  # id of input
+    description: 'the type of message, text | markdown'
+    required: false
+    default: 'text'
+  content:
+    description: 'the content of text message or markdown message'
+    required: false
+    default: '无话可说'
 outputs:
   time: # id of output
     description: 'The time we we greeted you'
