@@ -25,6 +25,7 @@ uses: pardjs/work-wechat-webhook-action@master
 with:
   msg-type: 'text'
 env:
+  KEY: ${{secrets.WORK_WECHAT_KEY}}
   CONTENT: '说点什么'
   MENTIONED_LIST: 'dozto,do021,bain'
 ```
