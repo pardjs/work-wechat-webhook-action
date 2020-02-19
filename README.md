@@ -1,4 +1,4 @@
-# Hello world JavaScript action
+# Work Wechat Webhook Action
 
 This action prints "Hello World" or "Hello" + the name of a person to greet to the log. To learn how this action was built, see "[Creating a JavaScript action](https://help.github.com/en/articles/creating-a-javascript-action)" in the GitHub Help documentation.
 
