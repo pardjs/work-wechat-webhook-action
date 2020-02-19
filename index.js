@@ -6,7 +6,7 @@ const {ok} = require('assert')
 try {
   // `who-to-greet` input defined in action metadata file
   const msgType = core.getInput('msg-type') || process.env.MSG_TYPE || 'text';
-  const content = core.getInput('content') || process.env.CONTENT || '无话可说';
+  const content = process.env.CONTENT || core.getInput('content');
   console.log('content of message: %j', {
     content, 
     input: core.getInput('content'), 
