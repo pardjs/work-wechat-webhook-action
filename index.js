@@ -7,7 +7,11 @@ try {
   // `who-to-greet` input defined in action metadata file
   const msgType = core.getInput('msg-type') || process.env.MSG_TYPE || 'text';
   const content = core.getInput('content') || process.env.CONTENT || '无话可说';
-  console.log('content of message: %s', content);
+  console.log('content of message: %j', {
+    content, 
+    input: core.getInput('content'), 
+    env: process.env.CONTENT,
+  });
   ok(content, 'content cannot be empty');
   const data = msgType === 'markdown' 
     ? { msgtype: 'markdown', markdown: { content } } 
