@@ -6,7 +6,7 @@ This action prints "Hello World" or "Hello" + the name of a person to greet to t
 
 ### `msg-type`
 
-The type of the Work Wechat message. Default `"text"`.
+The type of the Work Wechat message, `markdown` or `text`. Default `"text"`.
 
 ### `content`
 
